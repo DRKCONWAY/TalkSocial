@@ -1,0 +1,6 @@
+framework module Pods_TalkSocial {
+  umbrella header "Pods-TalkSocial-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034798261D9DFB6F00AEDA0F /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034798251D9DFB6F00AEDA0F /* Contants.swift */; };
+		034798281D9E016F00AEDA0F /* ImageShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034798271D9E016F00AEDA0F /* ImageShadows.swift */; };
 		0387F3EC1D9DBF7100B027C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387F3EB1D9DBF7100B027C4 /* AppDelegate.swift */; };
 		0387F3EE1D9DBF7100B027C4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387F3ED1D9DBF7100B027C4 /* SignInVC.swift */; };
 		0387F3F11D9DBF7100B027C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0387F3EF1D9DBF7100B027C4 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034798251D9DFB6F00AEDA0F /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		034798271D9E016F00AEDA0F /* ImageShadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageShadows.swift; sourceTree = "<group>"; };
 		0387F3E81D9DBF7100B027C4 /* TalkSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0387F3EB1D9DBF7100B027C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0387F3ED1D9DBF7100B027C4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -52,7 +56,7 @@
 		034798201D9DC44900AEDA0F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0387F3ED1D9DBF7100B027C4 /* SignInVC.swift */,
+				034798271D9E016F00AEDA0F /* ImageShadows.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -60,8 +64,17 @@
 		034798211D9DC45000AEDA0F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0387F3ED1D9DBF7100B027C4 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		034798241D9DFB6200AEDA0F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				034798251D9DFB6F00AEDA0F /* Contants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		0387F3DF1D9DBF7100B027C4 = {
@@ -85,6 +98,7 @@
 		0387F3EA1D9DBF7100B027C4 /* TalkSocial */ = {
 			isa = PBXGroup;
 			children = (
+				034798241D9DFB6200AEDA0F /* Utilities */,
 				034798201D9DC44900AEDA0F /* View */,
 				0347981F1D9DC44000AEDA0F /* Model */,
 				034798211D9DC45000AEDA0F /* Controller */,
@@ -242,6 +256,8 @@
 			files = (
 				0387F3EE1D9DBF7100B027C4 /* SignInVC.swift in Sources */,
 				0387F3EC1D9DBF7100B027C4 /* AppDelegate.swift in Sources */,
+				034798261D9DFB6F00AEDA0F /* Contants.swift in Sources */,
+				034798281D9E016F00AEDA0F /* ImageShadows.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
