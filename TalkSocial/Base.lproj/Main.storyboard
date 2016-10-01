@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Sign">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="JY9-Fd-wCT"/>
@@ -24,7 +24,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="6rI-kU-QEk"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -77,6 +77,13 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_opened-128" translatesAutoresizingMaskIntoConstraints="NO" id="PDN-el-jIP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="9Ww-Ad-cgr"/>
+                                    <constraint firstAttribute="width" constant="50" id="wd9-og-9hF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-icon-2-614x460" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-Yz-l0a"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,12 +91,16 @@
                             <constraint firstItem="RZO-xE-rhm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wp-yj-ThJ"/>
                             <constraint firstItem="RZO-xE-rhm" firstAttribute="top" secondItem="wlG-6Y-o3R" secondAttribute="bottom" constant="28" id="73h-rl-lh8"/>
                             <constraint firstItem="wlG-6Y-o3R" firstAttribute="centerX" secondItem="00d-sp-l8e" secondAttribute="centerX" id="7za-oX-dMW"/>
+                            <constraint firstItem="PDN-el-jIP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="8Kn-KD-cb9"/>
                             <constraint firstItem="rJ0-0L-eHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="9cb-1c-kxt"/>
                             <constraint firstItem="rCp-rK-rhz" firstAttribute="centerX" secondItem="OCR-7v-iQf" secondAttribute="centerX" id="9fE-Vw-qBx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rJ0-0L-eHK" secondAttribute="trailing" constant="-2" id="E1g-Ax-sXf"/>
+                            <constraint firstItem="bQs-Yz-l0a" firstAttribute="top" secondItem="PDN-el-jIP" secondAttribute="bottom" constant="8" symbolic="YES" id="F3N-jV-jMt"/>
                             <constraint firstItem="JY9-Fd-wCT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gqm-7H-VTO"/>
                             <constraint firstItem="00d-sp-l8e" firstAttribute="top" secondItem="BXF-BY-bgQ" secondAttribute="bottom" constant="37" id="ISg-Fb-lx0"/>
                             <constraint firstItem="fSk-Ee-PWl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="U2P-oE-yrB"/>
+                            <constraint firstItem="PDN-el-jIP" firstAttribute="centerY" secondItem="00d-sp-l8e" secondAttribute="centerY" id="Vp5-DS-d2z"/>
+                            <constraint firstItem="bQs-Yz-l0a" firstAttribute="centerY" secondItem="wlG-6Y-o3R" secondAttribute="centerY" id="Xwt-xj-vph"/>
                             <constraint firstItem="rCp-rK-rhz" firstAttribute="top" secondItem="OCR-7v-iQf" secondAttribute="bottom" constant="20" id="YlH-G0-Kut"/>
                             <constraint firstItem="JY9-Fd-wCT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zld-0U-Kz7"/>
                             <constraint firstItem="JY9-Fd-wCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXc-KW-TgP"/>
@@ -98,10 +109,12 @@
                             <constraint firstAttribute="trailing" secondItem="fSk-Ee-PWl" secondAttribute="trailing" constant="78" id="fhi-9g-qIY"/>
                             <constraint firstItem="OCR-7v-iQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="109" id="h1i-G1-WPv"/>
                             <constraint firstItem="00d-sp-l8e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="j2c-hp-lRs"/>
+                            <constraint firstItem="bQs-Yz-l0a" firstAttribute="leading" secondItem="rJ0-0L-eHK" secondAttribute="leading" id="jHe-KL-pHK"/>
                             <constraint firstItem="fSk-Ee-PWl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="75" id="kEY-2D-cb3"/>
                             <constraint firstItem="BXF-BY-bgQ" firstAttribute="top" secondItem="rCp-rK-rhz" secondAttribute="bottom" constant="37" id="lSG-xq-Flb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="00d-sp-l8e" secondAttribute="trailing" constant="23" id="oHn-30-GLp"/>
                             <constraint firstItem="JY9-Fd-wCT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pgG-iT-uHD"/>
+                            <constraint firstItem="bQs-Yz-l0a" firstAttribute="centerX" secondItem="PDN-el-jIP" secondAttribute="centerX" id="rxD-m3-Vtb"/>
                             <constraint firstAttribute="trailing" secondItem="JY9-Fd-wCT" secondAttribute="trailing" id="uL3-5N-4aE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JY9-Fd-wCT" secondAttribute="bottom" id="yWK-ts-ZOK"/>
                             <constraint firstItem="wlG-6Y-o3R" firstAttribute="trailing" secondItem="00d-sp-l8e" secondAttribute="trailing" id="yiF-bW-Tpt"/>
@@ -119,7 +132,9 @@
         <image name="BG" width="750" height="1334"/>
         <image name="FB icon" width="208" height="208"/>
         <image name="Select a sign in met" width="320" height="26"/>
+        <image name="box_opened-128" width="128" height="128"/>
         <image name="email" width="620" height="70"/>
+        <image name="lock-icon-2-614x460" width="614" height="460"/>
         <image name="logo" width="182" height="182"/>
         <image name="password" width="620" height="70"/>
         <image name="talk logo" width="180" height="92"/>
