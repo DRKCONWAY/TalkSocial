@@ -17,10 +17,14 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
+            
+            performSegue(withIdentifier: "goToFeedVC", sender: nil)
+        }
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInVC.dismissKeyboard))
@@ -108,7 +112,7 @@ class SignInVC: UIViewController {
     func completeSignIn(id: String) {
         let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
         print("Derek: Data was saved to the Keychain \(keychainResult)")
-
+        performSegue(withIdentifier: "goToFeedVC", sender: nil)
     }
 }
 
