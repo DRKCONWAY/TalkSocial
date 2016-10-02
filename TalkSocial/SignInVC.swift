@@ -12,6 +12,11 @@ import FBSDKCoreKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +67,8 @@ class SignInVC: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func signInButtonPressed(_ sender: AnyObject) {
+    }
     
     
 }

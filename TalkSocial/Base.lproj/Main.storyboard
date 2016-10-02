@@ -89,6 +89,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMO-Gl-83m"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_opened-128" translatesAutoresizingMaskIntoConstraints="NO" id="PDN-el-jIP">
                                 <constraints>
@@ -135,6 +138,10 @@
                             <constraint firstItem="OCR-7v-iQf" firstAttribute="top" secondItem="fSk-Ee-PWl" secondAttribute="bottom" constant="8" id="zLD-jL-h7a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="00d-sp-l8e" id="Buf-d5-eKf"/>
+                        <outlet property="passwordField" destination="wlG-6Y-o3R" id="QSM-60-4a1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
