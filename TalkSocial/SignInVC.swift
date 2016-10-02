@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -57,6 +58,11 @@ class SignInVC: UIViewController {
                 print("Derek: Unable to authenticate with Firebase. Doh! - \(error)")
             } else {
                 print("Derek: Successfully authenticated with Firebase!")
+                if let user = user {
+                    
+                    self.completeSignIn(id: user.uid)
+                }
+                
             }
         })
     }
@@ -75,6 +81,12 @@ class SignInVC: UIViewController {
                 
                 if error == nil {
                     print("Derek: Email user is authenticated with Firebase!")
+                    
+                    if let user = user {
+                        
+                        self.completeSignIn(id: user.uid)
+                    }
+                    
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         
@@ -82,6 +94,10 @@ class SignInVC: UIViewController {
                             print("Derek: Doh! Unable to authenticate with Firebase using email")
                         } else {
                             print("Derek: Successfully authenticated with good ol' Firebase!!")
+                            
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -89,7 +105,11 @@ class SignInVC: UIViewController {
         }
     }
     
-    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
+        print("Derek: Data was saved to the Keychain \(keychainResult)")
+
+    }
 }
 
 
