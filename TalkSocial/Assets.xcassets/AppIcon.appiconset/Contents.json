@@ -15,31 +15,31 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Icon-Small.png",
+      "filename" : "iTunesArtwork-1.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iTunesArtwork@2x 5-1.png",
+      "filename" : "Icon-60@3x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iTunesArtwork@2x 3-1.png",
+      "filename" : "Icon-60@3x-2.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Icon-Small-40@2x.png",
+      "filename" : "Icon-Small-60@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Icon-Small-60@3x.png",
+      "filename" : "iTunesArtwork.png",
       "scale" : "3x"
     },
     {
@@ -55,9 +55,28 @@
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
+      "idiom" : "ipad",
+      "size" : "29x29",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "29x29",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "40x40",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "40x40",
+      "scale" : "2x"
+    },
+    {
       "idiom" : "car",
-      "filename" : "Icon-60@3x-1.png",
+      "size" : "60x60",
       "scale" : "2x"
     },
     {

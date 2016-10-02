@@ -29,6 +29,7 @@
 		0387F3F51D9DBF7100B027C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0387F3F71D9DBF7100B027C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0387F3FD1D9DC0CA00B027C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03C2E3FB1DA055700038CECE /* TalkSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TalkSocial.entitlements; sourceTree = "<group>"; };
 		1CD1EA5587773114B2BA72C8 /* Pods-TalkSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TalkSocial/Pods-TalkSocial.release.xcconfig"; sourceTree = "<group>"; };
 		894A9ABF04B1C2D42C296421 /* Pods-TalkSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalkSocial/Pods-TalkSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		D05D4481646D611F50FFC1EF /* Pods_TalkSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +99,7 @@
 		0387F3EA1D9DBF7100B027C4 /* TalkSocial */ = {
 			isa = PBXGroup;
 			children = (
+				03C2E3FB1DA055700038CECE /* TalkSocial.entitlements */,
 				034798241D9DFB6200AEDA0F /* Utilities */,
 				034798201D9DC44900AEDA0F /* View */,
 				0347981F1D9DC44000AEDA0F /* Model */,
@@ -166,6 +168,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = X3MF58BS4U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
