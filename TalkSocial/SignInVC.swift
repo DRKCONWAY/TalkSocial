@@ -21,16 +21,21 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
-            
-            performSegue(withIdentifier: "goToFeedVC", sender: nil)
-        }
-        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignInVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
+    // The segue needs to be in viewdidappear
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
+            print("Derek: ID found in keychain!")
+            
+            performSegue(withIdentifier: "goToFeedVC", sender: nil)
+        }
+
+    }
 
 
     

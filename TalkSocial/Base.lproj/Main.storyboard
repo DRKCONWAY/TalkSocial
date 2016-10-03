@@ -159,12 +159,33 @@
                     <view key="view" contentMode="scaleToFill" id="V3A-1L-lPg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPT-Pe-KZJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="2no-9T-GCM"/>
+                                    <constraint firstAttribute="height" constant="30" id="jxz-YK-YTz"/>
+                                </constraints>
+                                <state key="normal" title="Sign out fool!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SignOutTapped:" destination="xeC-pP-KfG" eventType="touchUpInside" id="NMF-JS-2uD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qPT-Pe-KZJ" firstAttribute="top" secondItem="Bej-np-RSy" secondAttribute="bottom" constant="180" id="SWO-16-R8U"/>
+                            <constraint firstItem="qPT-Pe-KZJ" firstAttribute="centerX" secondItem="V3A-1L-lPg" secondAttribute="centerX" id="ZPV-La-jX4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInVC" id="iih-YN-eWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsB-fG-9gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="138"/>
+            <point key="canvasLocation" x="817.5" y="137.32394366197184"/>
         </scene>
     </scenes>
     <resources>
