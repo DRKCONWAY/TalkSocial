@@ -20,6 +20,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+   
+        // use this as a listener to the "posts" on Firebase for any changes
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            print(snapshot.value)
+        })
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
