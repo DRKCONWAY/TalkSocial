@@ -19,6 +19,7 @@
 		0387F3FE1D9DC0CA00B027C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0387F3FD1D9DC0CA00B027C4 /* GoogleService-Info.plist */; };
 		03C827E11DA330D2001B93AC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C827E01DA330D2001B93AC /* PostCell.swift */; };
 		03EEEB231DA707A600AA9D73 /* Data Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEEB221DA707A600AA9D73 /* Data Service.swift */; };
+		03EEEB251DA875D500AA9D73 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EEEB241DA875D500AA9D73 /* Post.swift */; };
 		E4F173F76B6ADAA57563A52B /* Pods_TalkSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05D4481646D611F50FFC1EF /* Pods_TalkSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		03C2E3FB1DA055700038CECE /* TalkSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TalkSocial.entitlements; sourceTree = "<group>"; };
 		03C827E01DA330D2001B93AC /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		03EEEB221DA707A600AA9D73 /* Data Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data Service.swift"; sourceTree = "<group>"; };
+		03EEEB241DA875D500AA9D73 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1CD1EA5587773114B2BA72C8 /* Pods-TalkSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TalkSocial/Pods-TalkSocial.release.xcconfig"; sourceTree = "<group>"; };
 		894A9ABF04B1C2D42C296421 /* Pods-TalkSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TalkSocial/Pods-TalkSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		D05D4481646D611F50FFC1EF /* Pods_TalkSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 		0347981F1D9DC44000AEDA0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03EEEB241DA875D500AA9D73 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				0387F3EC1D9DBF7100B027C4 /* AppDelegate.swift in Sources */,
 				036C4C6C1DA1889C00FC5C77 /* FeedVC.swift in Sources */,
 				034798261D9DFB6F00AEDA0F /* Contants.swift in Sources */,
+				03EEEB251DA875D500AA9D73 /* Post.swift in Sources */,
 				036C4C6E1DA2203200FC5C77 /* circleView.swift in Sources */,
 				034798281D9E016F00AEDA0F /* ImageShadows.swift in Sources */,
 			);
