@@ -11,17 +11,23 @@ import SwiftKeychainWrapper
 import Firebase
 
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: UIImageView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         tableView.dataSource = self
         tableView.delegate = self
+        
+        imagePicker = UIImagePickerController()
    
         // use this as a listener to the "posts" on Firebase for any changes
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -63,6 +69,16 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image 
+        } else {
+            print("Derek: A valid image wasn't selected!!!")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
         
@@ -75,4 +91,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "goToSignInVC", sender: nil)
     }
     
+    @IBAction func addImageButtonTapped(_ sender: AnyObject) {
+        present(imagePicker, animated: true, completion: nil)
+    }
 }
