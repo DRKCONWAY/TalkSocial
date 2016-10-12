@@ -40,7 +40,7 @@ class SignInVC: UIViewController {
 
     
 // This function is how you authenticate with Facebook
-    @IBAction func fBButtonPressed(_ sender: AnyObject) {
+    @IBAction func fBButtonPressed(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in

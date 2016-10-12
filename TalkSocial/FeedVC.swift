@@ -22,12 +22,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker = UIImagePickerController()
+        
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         tableView.dataSource = self
         tableView.delegate = self
         
-        imagePicker = UIImagePickerController()
+        
    
         // use this as a listener to the "posts" on Firebase for any changes
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -69,7 +71,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
     }
     
-    @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+      private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image 
@@ -93,5 +95,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func addImageButtonTapped(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
+        
     }
 }
