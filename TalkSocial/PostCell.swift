@@ -40,7 +40,7 @@ class PostCell: UITableViewCell {
                     if let imageData = data {
                         if let image = UIImage(data: imageData) {
                             self.postImage.image = image
-                            FeedVC.imageCache.setObject(image, forKey: post.imageURL)
+                            FeedVC.imageCache.setObject(image, forKey: post.imageURL as NSString)
                         }
                     }
                 }
