@@ -15,7 +15,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: UIImageView!
+    @IBOutlet weak var captionField: UITextField!
     
+    var imageSelected = false
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
@@ -83,7 +85,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-            imageAdd.image = image 
+            imageAdd.image = image
+            imageSelected = true
         } else {
             print("Derek: A valid image wasn't selected!!!")
         }
@@ -106,4 +109,34 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    @IBAction func postButtonPressed(_ sender: AnyObject) {
+        guard let caption = captionField.text, caption != "" else {
+           print("Derek: A caption must be entered!!")
+            return
+        }
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("Derek: An image must be selected!!")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(img, 0.2) {
+            let imgUID = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUID).put(imageData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("Derek: Unable to uplad image to Firebase storage!!")
+                } else {
+                    print("Derek: Successfully uploaded image to Firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
+    
+    
+    
+
 }

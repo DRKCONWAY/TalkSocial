@@ -277,20 +277,6 @@
                                 <color key="textColor" red="1" green="0.98402579130000001" blue="0.94873940290000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-KJ-thU">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="S0B-Em-hiz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" red="0.62352941176470589" green="0.18823529411764706" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your caption..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="lDj-5U-62W">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="0.53948233060747663" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="WKe-fS-jrT">
                                 <gestureRecognizers/>
                                 <constraints>
@@ -300,8 +286,28 @@
                                     <outletCollection property="gestureRecognizers" destination="w3x-Ge-Dk8" appends="YES" id="9N8-Z0-SxC"/>
                                 </connections>
                             </imageView>
-                            <imageView alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-icon-21" translatesAutoresizingMaskIntoConstraints="NO" id="7nD-eF-1Ep">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-KJ-thU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="S0B-Em-hiz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.62352941176470589" green="0.18823529411764706" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="xeC-pP-KfG" eventType="touchUpInside" id="Yg3-aF-Frs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your caption..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-R8-SuX">
+                                <color key="textColor" red="0.30588235294117649" green="0.29019607843137257" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slice 1" translatesAutoresizingMaskIntoConstraints="NO" id="7nD-eF-1Ep" customClass="circleView" customModule="TalkSocial" customModuleProvider="target">
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="ffo-x9-rQE"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="9IH-ta-xLV" appends="YES" id="3nh-lL-UKH"/>
                                 </connections>
@@ -310,25 +316,23 @@
                         <color key="backgroundColor" red="0.96083392518939392" green="0.95161649776450508" blue="0.95706608857139186" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2cX-KJ-thU" firstAttribute="trailing" secondItem="V3A-1L-lPg" secondAttribute="trailingMargin" id="2Jz-Hu-ryD"/>
-                            <constraint firstItem="nY0-Ow-0kk" firstAttribute="top" secondItem="7nD-eF-1Ep" secondAttribute="bottom" constant="12" id="5tt-eI-hk9"/>
+                            <constraint firstItem="2cX-KJ-thU" firstAttribute="leading" secondItem="Jzc-R8-SuX" secondAttribute="trailing" constant="8" symbolic="YES" id="7eq-Lb-RfN"/>
+                            <constraint firstItem="Jzc-R8-SuX" firstAttribute="leading" secondItem="7nD-eF-1Ep" secondAttribute="trailing" constant="8" symbolic="YES" id="AJJ-OW-n0n"/>
                             <constraint firstItem="Y06-fq-0Ik" firstAttribute="leading" secondItem="V3A-1L-lPg" secondAttribute="leading" constant="-7" id="ALH-9q-vtV"/>
                             <constraint firstItem="nY0-Ow-0kk" firstAttribute="top" secondItem="Y06-fq-0Ik" secondAttribute="bottom" constant="69" id="D2O-y0-DLm"/>
+                            <constraint firstItem="7nD-eF-1Ep" firstAttribute="leading" secondItem="WKe-fS-jrT" secondAttribute="leading" id="Kvd-A9-MJ9"/>
                             <constraint firstItem="N6Q-wD-oVL" firstAttribute="leading" secondItem="WKe-fS-jrT" secondAttribute="trailing" constant="86" id="NuK-my-E3T"/>
-                            <constraint firstItem="7nD-eF-1Ep" firstAttribute="top" secondItem="Y06-fq-0Ik" secondAttribute="bottom" constant="10" id="Pot-sX-VQX"/>
                             <constraint firstItem="N6Q-wD-oVL" firstAttribute="centerX" secondItem="Y06-fq-0Ik" secondAttribute="centerX" id="RIh-ml-gfI"/>
                             <constraint firstItem="Y06-fq-0Ik" firstAttribute="top" secondItem="V3A-1L-lPg" secondAttribute="top" constant="-5" id="Smh-Cv-h1G"/>
-                            <constraint firstItem="lDj-5U-62W" firstAttribute="top" secondItem="Y06-fq-0Ik" secondAttribute="bottom" constant="21" id="TdJ-Lh-6KR"/>
+                            <constraint firstItem="7nD-eF-1Ep" firstAttribute="bottom" secondItem="2cX-KJ-thU" secondAttribute="bottom" constant="2" id="T7S-6V-po7"/>
                             <constraint firstAttribute="trailing" secondItem="Y06-fq-0Ik" secondAttribute="trailing" constant="-7" id="URp-lM-S48"/>
                             <constraint firstItem="nY0-Ow-0kk" firstAttribute="centerX" secondItem="V3A-1L-lPg" secondAttribute="centerX" id="V7s-Fu-V8Q"/>
-                            <constraint firstItem="N6Q-wD-oVL" firstAttribute="centerX" secondItem="lDj-5U-62W" secondAttribute="centerX" id="VP0-cd-phi"/>
-                            <constraint firstItem="2cX-KJ-thU" firstAttribute="leading" secondItem="lDj-5U-62W" secondAttribute="trailing" constant="8" symbolic="YES" id="XrQ-Lb-f19"/>
                             <constraint firstItem="nY0-Ow-0kk" firstAttribute="leading" secondItem="V3A-1L-lPg" secondAttribute="leading" id="bhJ-jb-E4I"/>
-                            <constraint firstItem="lDj-5U-62W" firstAttribute="bottom" secondItem="7nD-eF-1Ep" secondAttribute="bottom" constant="-6" id="hkY-M3-6HW"/>
+                            <constraint firstItem="nY0-Ow-0kk" firstAttribute="top" secondItem="7nD-eF-1Ep" secondAttribute="bottom" constant="11" id="hRg-RM-v6f"/>
                             <constraint firstItem="nY0-Ow-0kk" firstAttribute="top" secondItem="WKe-fS-jrT" secondAttribute="bottom" constant="85" id="jdW-hY-8dK"/>
+                            <constraint firstItem="7nD-eF-1Ep" firstAttribute="top" secondItem="Y06-fq-0Ik" secondAttribute="bottom" constant="11" id="kIa-Qu-gQz"/>
                             <constraint firstItem="WKe-fS-jrT" firstAttribute="top" secondItem="Bej-np-RSy" secondAttribute="bottom" constant="8" symbolic="YES" id="lHS-rX-KYB"/>
-                            <constraint firstItem="2cX-KJ-thU" firstAttribute="centerY" secondItem="7nD-eF-1Ep" secondAttribute="centerY" constant="-1" id="meh-i9-eNG"/>
-                            <constraint firstItem="lDj-5U-62W" firstAttribute="leading" secondItem="7nD-eF-1Ep" secondAttribute="trailing" constant="9" id="prk-MY-VY3"/>
-                            <constraint firstItem="7nD-eF-1Ep" firstAttribute="leading" secondItem="WKe-fS-jrT" secondAttribute="leading" id="tEX-lQ-qZp"/>
+                            <constraint firstItem="Jzc-R8-SuX" firstAttribute="centerY" secondItem="2cX-KJ-thU" secondAttribute="centerY" id="pI1-eE-IoF"/>
                             <constraint firstItem="HFd-Eb-4LL" firstAttribute="top" secondItem="nY0-Ow-0kk" secondAttribute="bottom" id="u1g-Zo-UkZ"/>
                             <constraint firstItem="WKe-fS-jrT" firstAttribute="top" secondItem="N6Q-wD-oVL" secondAttribute="top" id="uLl-Gm-FZB"/>
                             <constraint firstItem="WKe-fS-jrT" firstAttribute="leading" secondItem="V3A-1L-lPg" secondAttribute="leadingMargin" id="v2N-Ng-VfL"/>
@@ -336,6 +340,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="Jzc-R8-SuX" id="5qc-es-vy8"/>
                         <outlet property="imageAdd" destination="7nD-eF-1Ep" id="y8P-Oh-Vtb"/>
                         <outlet property="tableView" destination="nY0-Ow-0kk" id="viI-Ks-YXA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInVC" id="iih-YN-eWf"/>
@@ -348,6 +353,9 @@
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="9IH-ta-xLV" userLabel="Add image tapped">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="26"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="addImageButtonTapped:" destination="xeC-pP-KfG" id="gDY-i6-vgf"/>
                     </connections>
@@ -362,8 +370,8 @@
         <image name="BG" width="750" height="1334"/>
         <image name="Facebook button" width="830" height="106"/>
         <image name="Select a sign in met" width="320" height="26"/>
+        <image name="Slice 1" width="512" height="512"/>
         <image name="box_opened-128" width="128" height="128"/>
-        <image name="camera-icon-21" width="512" height="512"/>
         <image name="email" width="620" height="70"/>
         <image name="empty-heart" width="210" height="210"/>
         <image name="lock-icon-2-614x460" width="614" height="460"/>
